@@ -41,7 +41,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Create', 'fas fa-plus', Pokemon::class)->setAction(Crud::PAGE_NEW),
         ]);
 
-        yield MenuItem::section('Details');
+        yield MenuItem::section('Detail');
 
         $pokemons = $this->entityManager->getRepository(Pokemon::class)->findBy([], ['id' => 'desc'], 3);
 
